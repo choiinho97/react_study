@@ -1,16 +1,27 @@
-import World from '../component/World'
-import styles from "./Hello.module.css"
 
 const Hello = () => {
+  function showName () {
+    console.log("Mike")
+  }
+  function showAge(age) {
+    console.log(age);
+  }
+  function showText(txt) {
+    console.log(txt)
+  }
+  
+
   return (
     <div>
-      <h1 style={{
-        color: "#ff0",
-        borderRight : "12px solid #000",
-        marginBottom: "50px",
-        opacity: 1,
-      }}>Hello</h1>
-      <div className={styles.box}>Hello</div>
+      <h1>Hello</h1>
+      <button onClick={showName}>Show name</button>
+      <button onClick={()=>{
+        showAge(10);
+      }}>Show age</button>
+      <input type="text" onChange={(e)=>{
+        const txt = e.target.value
+        showText(txt)
+      }}/>
     </div>
   );
 };
