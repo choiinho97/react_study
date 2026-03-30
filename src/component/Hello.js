@@ -1,17 +1,14 @@
-import World from '../component/World'
-import styles from "./Hello.module.css"
+import {useState} from "react";
+
 const Hello = () => {
+  // let name = "Mike"
+  const [name, setName] = useState("Mike");
+ 
   return (
     <div>
-      <h1 style={
-        {
-          color: '#f00',
-          border: '2px solid #000',
-          marginBottom: '30px',
-          opacity: 0.7,
-        }
-      }>Hello</h1>
-      <div className={styles.box}>Hello</div>
+      <h1>State</h1>
+      <h2 id="name">{name}</h2>
+      <button onClick={()=>{setName(name === "Mike" ? "Jane" : "Mike")}}>Change</button>
     </div>
   );
 };
