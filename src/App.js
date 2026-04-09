@@ -7,7 +7,7 @@ function App() {
       <h3>props : properties</h3>
       <Hello age={20}/>
       <Hello age={40}/>
-      <Hello age={60}/>
+      <Hello age={80}/>
     </div>
   );
 }
