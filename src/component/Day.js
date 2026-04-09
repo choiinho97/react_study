@@ -3,8 +3,7 @@ import Word from "./Word";
 import useFetch from "../hooks/useFetch";
 
 function Day() {
-  const a = useParams();
-  const day = a.day;
+  const { day } = useParams();
   const words = useFetch(`http://localhost:3001/words?day=${day}`);
 
   return (

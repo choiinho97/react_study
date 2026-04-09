@@ -1,16 +1,15 @@
 import { useState } from "react";
 
-export default function Word({ word: w }) {
-  const [word, setWord] = useState(w);
+export default function Word({ word: initialWord }) {
+  const [word, setWord] = useState(initialWord);
   const [isShow, setIsShow] = useState(false);
-  const [isDone, setIsDone] = useState(word.isDone);
+  const [isDeleted, setIsDeleted] = useState(false);
 
   function toggleShow() {
     setIsShow(!isShow);
   }
 
   function toggleDone() {
-    // setIsDone(!isDone);
     fetch(`http://localhost:3001/words/${word.id}`, {
       method: "PUT",
       headers: {
@@ -18,11 +17,11 @@ export default function Word({ word: w }) {
       },
       body: JSON.stringify({
         ...word,
-        isDone: !isDone,
+        isDone: !word.isDone,
       }),
     }).then((res) => {
       if (res.ok) {
-        setIsDone(!isDone);
+        setWord({ ...word, isDone: !word.isDone });
       }
     });
   }
@@ -33,20 +32,20 @@ export default function Word({ word: w }) {
         method: "DELETE",
       }).then((res) => {
         if (res.ok) {
-          setWord({ id: 0 });
+          setIsDeleted(true);
         }
       });
     }
   }
 
-  if (word.id === 0) {
+  if (isDeleted) {
     return null;
   }
 
   return (
-    <tr className={isDone ? "off" : ""}>
+    <tr className={word.isDone ? "off" : ""}>
       <td>
-        <input type="checkbox" checked={isDone} onChange={toggleDone} />
+        <input type="checkbox" checked={word.isDone} onChange={toggleDone} />
       </td>
       <td>{word.eng}</td>
       <td>{isShow && word.kor}</td>
