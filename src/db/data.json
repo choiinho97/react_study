@@ -1,0 +1,85 @@
+{
+  "days": [
+    {
+      "id": "1",
+      "day": 1
+    },
+    {
+      "id": "2",
+      "day": 2
+    },
+    {
+      "id": "3",
+      "day": 3
+    },
+    {
+      "day": 4,
+      "id": "Txv62mb"
+    }
+  ],
+  "words": [
+    {
+      "id": "1",
+      "day": 1,
+      "eng": "book",
+      "kor": "책",
+      "isDone": false
+    },
+    {
+      "id": "3",
+      "day": 2,
+      "eng": "banana",
+      "kor": "바나나",
+      "isDone": true
+    },
+    {
+      "id": "5",
+      "day": 3,
+      "eng": "tool",
+      "kor": "도구",
+      "isDone": false
+    },
+    {
+      "id": "6",
+      "day": 3,
+      "eng": "paper",
+      "kor": "종이",
+      "isDone": false
+    },
+    {
+      "day": "3",
+      "eng": "window",
+      "kor": "창문",
+      "isDone": false,
+      "id": "69XIvgr"
+    },
+    {
+      "day": "3",
+      "eng": "house",
+      "kor": "집",
+      "isDone": false,
+      "id": "X8B4MBx"
+    },
+    {
+      "day": "2",
+      "eng": "wall",
+      "kor": "벽",
+      "isDone": true,
+      "id": "ZSxDiir"
+    },
+    {
+      "day": "4",
+      "eng": "monkey",
+      "kor": "원숭이",
+      "isDone": false,
+      "id": "IKvteGE"
+    },
+    {
+      "day": "2",
+      "eng": "money",
+      "kor": "돈 ",
+      "isDone": false,
+      "id": "UVTCXTd"
+    }
+  ]
+}
